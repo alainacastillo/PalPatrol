@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f9dce4" />
+  <title>Little Rest — a gentle place to pause</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+</head>
+<body>
+  <div class="sky-decor">☁️　✦　🌸　☁️</div>
+  <header><a class="brand" href="#home" data-page="home">little rest <span>✿</span></a><button type="button" id="menuBtn" class="menu" aria-label="Open menu">☰</button><nav id="nav"><a href="#home" data-page="home">🏠 Home</a><a href="#checkin" data-page="checkin">💗 Check-in</a><a href="#ideas" data-page="ideas">💭 Maybe Try This?</a><a href="#book" data-page="book">📖 Calm Book</a><a href="#games" data-page="games">🎮 Games</a><a href="#faith" data-page="faith">🙏 Faith</a><a href="#journal" data-page="journal">📝 Journal</a></nav></header>
+  <main>
+    <section id="home" class="page active hero">
+      <div class="hero-copy"><p class="eyebrow">a soft place to land</p><h1>🌸 Take a Break.<br>You Deserve It.</h1><p class="lede">A little space to breathe, rest, reflect, pray, play, and remember that you don't have to do everything at once.</p><button type="button" class="primary" data-page="checkin">Start gently →</button></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun">☼</div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="rainbow">🌈</div><div class="ground">🌷　🌿　🦋　🌸</div></div>
+      <div class="experience-grid">
+        <button type="button" class="experience pink" data-page="checkin"><b>💗 Check In</b><span>What do I need today?</span></button><button type="button" class="experience cream" data-page="ideas"><b>💭 Maybe Try This?</b><span>Find one gentle idea.</span></button><button type="button" class="experience lavender" data-page="games"><b>🎮 Little Games</b><span>Play something simple.</span></button><button type="button" class="experience peach" data-page="faith"><b>🙏 Faith & Peace</b><span>Read, pray, reflect.</span></button><button type="button" class="experience green" data-page="journal"><b>📝 Journal</b><span>Write what's on your mind.</span></button>
+      </div>
+    </section>
+
+    <section id="checkin" class="page"><button type="button" class="back" data-page="home">← Back</button><p class="eyebrow">a tiny moment for you</p><h2>🌷 Today's Little Check-In</h2><p class="lede">What do you need most today?</p><div class="choice-grid" id="needChoices"></div><article id="checkResult" class="result-card hidden"></article><div class="right-now"><h3>✨ What should I do right now?</h3><button type="button" class="secondary" id="rightNow">Give me one small thing</button><div id="rightNowResult" class="tiny-result"></div></div></section>
+
+    <section id="ideas" class="page"><button type="button" class="back" data-page="home">← Back</button><p class="eyebrow">a gentle conversation, just for you</p><h2>💭 Maybe Try This?</h2><p class="lede">Tell me in your own words, or borrow an idea to get started. Your answers help make each little suggestion more personal.</p><p class="privacy-note">💗 Your answers are saved on this device to personalize your suggestions. You can edit or delete them anytime.</p><div id="ideaFlow"></div><div class="idea-actions"><button type="button" class="secondary" id="surpriseBtn">🎁 Surprise me</button><button type="button" class="secondary" id="moodBtn">😊 How are you feeling?</button></div><article id="recommendation" class="result-card" aria-live="polite"></article><div class="collection-grid" id="collections"></div></section>
+
+    <section id="book" class="page"><button type="button" class="back" data-page="home">← Back</button><p class="eyebrow">little pages for your softest thoughts</p><h2>📖 My Calm Book</h2><p class="lede">Choose an illustrated page to open.</p><div class="book-grid">
+      <button type="button" class="book-card" data-modal="favorite">📚<b>Favorite Book</b><span>Put a title on your shelf</span></button><button type="button" class="book-card" data-modal="thought">☁️<b>Thought Cloud</b><span>Let it float out</span></button><button type="button" class="book-card" data-modal="gratitude">🫙<b>Gratitude Jar</b><span>Fill it with little notes</span></button><button type="button" class="book-card" data-modal="draw">✏️<b>Draw Your Reset</b><span>Make a peaceful mark</span></button><button type="button" class="book-card" data-modal="comfort">🌱<b>Things That Help Me</b><span>Build your comfort list</span></button><button type="button" class="book-card" data-modal="places">🗺️<b>Peaceful Places</b><span>Pin somewhere gentle</span></button><button type="button" class="book-card" data-modal="step">👣<b>Today's Small Step</b><span>Walk one step at a time</span></button>
+    </div></section>
+
+    <section id="games" class="page"><button type="button" class="back" data-page="home">← Back</button><p class="eyebrow">no pressure, just play</p><h2>🎮 Little Games</h2><div class="game-groups" id="gameGroups"></div><button type="button" class="wheel-banner" data-modal="wheel"><span>🎡</span><div><b>My Little Reset Wheel</b><small>Make a wheel just for you →</small></div></button></section>
+
+    <section id="faith" class="page"><button type="button" class="back" data-page="home">← Back</button><p class="eyebrow">a quiet place with God</p><h2>✝️ Faith & Peace</h2><div class="faith-grid"><article class="faith-card"><span>📖</span><h3>Rest in His Word</h3><p id="verseText"></p><button type="button" class="secondary" id="newVerse">✨ Give me a verse</button><button type="button" class="text-btn" id="saveVerse">🤍 Save this verse</button><div id="savedVerses"></div></article><article class="faith-card"><span>🙏</span><h3>Talk to God</h3><div class="pill-row" id="prayerTypes"></div><p id="prayerText" class="prayer"></p><button type="button" class="secondary" id="newPrayer">🙏 Another prayer</button></article><article class="faith-card note-card"><span>💌</span><h3>A little note for you</h3><p id="noteText"></p><button type="button" class="secondary" id="newNote">💌 Give me another note</button></article><article class="faith-card"><span>⏰</span><h3>Give me 5 minutes</h3><p id="resetText">A tiny guided pause, one minute at a time.</p><div class="timer-num" id="resetClock">05:00</div><div class="button-row"><button type="button" class="secondary" id="resetStart">Start</button><button type="button" class="text-btn" id="resetPause">Pause</button><button type="button" class="text-btn" id="resetRestart">Restart</button></div></article></div></section>
+
+    <section id="journal" class="page"><button type="button" class="back" data-page="home">← Back</button><div class="notebook"><div class="binder"></div><p class="eyebrow">a private page, just for you</p><h2>📔 Let It Out</h2><label for="journalText">What's on your mind?</label><textarea id="journalText" placeholder="You can begin anywhere…"></textarea><div class="button-row"><button type="button" class="primary" id="saveJournal">Save</button><button type="button" class="secondary" id="clearJournal">Clear</button></div><small>🔒 Your journal stays on this device.</small></div></section>
+  </main>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-box"><button type="button" class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+  <template id="gameTemplate"><div class="game-head"><button type="button" class="back close-game">← Back to Games</button><h2></h2><p></p></div><div class="game-stage"></div><div class="game-actions"><button type="button" class="secondary play-again">↻ Play Again</button></div></template>
+  <script src="app.js"></script>
+</body>
+</html>
